@@ -1,0 +1,26 @@
+{% extends 'default.html' %}
+
+{% block content %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-1 px-1 position-fixed" id="sticky-sidebar">
+			<div class="nav flex-column flex-nowrap vh-100 overflow-auto text-white p-2">
+				<div class="list-group list-group-flush">
+					<a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{ url_for('timeline') }}">Timeline</a>
+					<br>
+                    			<br>
+                    			<a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{ url_for('account') }}">Account</a>
+                    			<br>
+                    			<br>
+                    			<a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{ url_for('logout') }}">Logout</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="text-center mt-4 name">
+		{{username}}
+	</div>
+{% endblock %}
